@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail SPP</title>
+</head>
+<body>
+    <h1>Detail SPP</h1>
+    <p>ID: {{ spp.id_spp }}</p>
+    <p>Tahun: {{ spp.tahun }}</p>
+    <p>Nominal: {{ spp.nominal }}</p>
+    <a href="{% url 'edit_spp' spp.pk %}">Edit</a>
+    <a href="{% url 'hapus_spp' spp.pk %}">Hapus</a>
+    <a href="{% url 'daftar_spp' %}">Kembali ke Daftar SPP</a> <!-- Link kembali ke daftar SPP -->
+</body>
+</html>

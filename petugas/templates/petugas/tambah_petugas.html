@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Petugas</title>
+</head>
+<body>
+    <h1>Tambah Petugas</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_petugas">ID Petugas:</label>
+        <input type="number" id="id_petugas" name="id_petugas"><br><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="nama_petugas">Nama Petugas:</label>
+        <input type="text" id="nama_petugas" name="nama_petugas"><br><br>
+        <label for="level">Level:</label>
+        <select id="level" name="level">
+            <option value="admin">Admin</option>
+            <option value="petugas">Petugas</option>
+        </select><br><br>
+        <input type="submit" value="Simpan">
+    </form>
+    <a href="{% url 'daftar_petugas' %}">Kembali ke Daftar Petugas</a> <!-- Link untuk kembali ke daftar petugas -->
+</body>
+</html>

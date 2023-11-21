@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Petugas</title>
+</head>
+<body>
+    <h1>Detail Petugas</h1>
+    <p>ID Petugas: {{ petugas.id_petugas }}</p>
+    <p>Username: {{ petugas.username }}</p>
+    <p>Nama Petugas: {{ petugas.nama_petugas }}</p>
+    <p>Level: {{ petugas.level }}</p>
+
+    <a href="{% url 'daftar_petugas' %}">Kembali ke Daftar Petugas</a> <!-- Link untuk kembali ke daftar petugas -->
+</body>
+</html>

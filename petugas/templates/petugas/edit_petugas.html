@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Petugas</title>
+</head>
+<body>
+    <h1>Edit Petugas</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="{{ petugas.username }}"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" value="{{ petugas.password }}"><br><br>
+        <label for="nama_petugas">Nama Petugas:</label>
+        <input type="text" id="nama_petugas" name="nama_petugas" value="{{ petugas.nama_petugas }}"><br><br>
+        <label for="level">Level:</label>
+        <select id="level" name="level">
+            <option value="admin" {% if petugas.level == 'admin' %}selected{% endif %}>Admin</option>
+            <option value="petugas" {% if petugas.level == 'petugas' %}selected{% endif %}>Petugas</option>
+        </select><br><br>
+        <input type="submit" value="Simpan">
+    </form>
+    <a href="{% url 'daftar_petugas' %}">Batal</a> <!-- Link untuk batal dan kembali ke daftar petugas -->
+</body>
+</html>

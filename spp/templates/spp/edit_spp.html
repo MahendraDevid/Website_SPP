@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit SPP</title>
+</head>
+<body>
+    <h1>Edit SPP</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_spp">ID SPP:</label>
+        <span>{{ spp.id_spp }}</span><br><br>
+        <label for="tahun">Tahun:</label>
+        <input type="text" id="tahun" name="tahun" value="{{ spp.tahun }}"><br><br>
+        <label for="nominal">Nominal:</label>
+        <input type="text" id="nominal" name="nominal" value="{{ spp.nominal }}"><br><br>
+        <input type="submit" value="Simpan">
+    </form>
+    <a href="{% url 'detail_spp' spp.pk %}">Batal</a> <!-- Link untuk batal dan kembali ke detail SPP -->
+</body>
+</html>
