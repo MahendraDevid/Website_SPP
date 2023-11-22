@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 
+app_name = 'spp'  # nama aplkasi
+
 urlpatterns = [
     path('', views.daftar_spp, name='daftar_spp'),
     path('tambah/', views.tambah_spp, name='tambah_spp'),
