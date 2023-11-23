@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Kelas</title>
+</head>
+<body>
+    <h1>Detail Kelas</h1>
+    <p>ID Kelas: {{ kelas.id_kelas }}</p>
+    <p>Nama Kelas: {{ kelas.nama_kelas }}</p>
+    <p>Kompetensi Keahlian: {{ kelas.kompetensi_keahlian }}</p>
+    <a href="{% url 'kelas:daftar_kelas' %}">Kembali ke Daftar Kelas</a> <!-- Link untuk kembali ke daftar kelas -->
+</body>
+</html>

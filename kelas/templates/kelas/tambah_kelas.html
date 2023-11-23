@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Kelas</title>
+</head>
+<body>
+    <h1>Tambah Kelas</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_kelas">ID Kelas:</label>
+        <input type="number" id="id_kelas" name="id_kelas" required><br><br>
+        <label for="nama_kelas">Nama Kelas:</label>
+        <input type="text" id="nama_kelas" name="nama_kelas" required><br><br>
+        <label for="kompetensi_keahlian">Kompetensi Keahlian:</label>
+        <input type="text" id="kompetensi_keahlian" name="kompetensi_keahlian" required><br><br>
+        <input type="submit" value="Simpan">
+    </form>
+    <a href="{% url 'kelas:daftar_kelas' %}">Kembali ke Daftar Kelas</a> <!-- Link untuk kembali ke daftar kelas -->
+</body>
+</html>

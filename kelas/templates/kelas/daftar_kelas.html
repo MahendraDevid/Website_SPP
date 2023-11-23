@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Kelas</title>
+</head>
+<body>
+    <h1>Daftar Kelas</h1>
+    <a href="{% url 'kelas:tambah_kelas' %}">Tambah Kelas</a> <!-- Link untuk tambah kelas -->
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID Kelas</th>
+                <th>Nama Kelas</th>
+                <th>Kompetensi Keahlian</th>
+                <th>Detail</th>
+                <th>Edit</th>
+                <th>Hapus</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for kelas in kelas_list %}
+            <tr>
+                <td>{{ kelas.id_kelas }}</td>
+                <td>{{ kelas.nama_kelas }}</td>
+                <td>{{ kelas.kompetensi_keahlian }}</td>
+                <td><a href="{% url 'kelas:detail_kelas' kelas.id_kelas %}">Detail</a></td>
+                <td><a href="{% url 'kelas:edit_kelas' kelas.id_kelas %}">Edit</a></td>
+                <td><a href="{% url 'kelas:hapus_kelas' kelas.id_kelas %}" onclick="return confirmDelete()">Hapus</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+    function confirmDelete() {
+        return confirm('Apakah Anda yakin ingin menghapus kelas ini?');
+    }
+    </script>
+</body>
+</html>

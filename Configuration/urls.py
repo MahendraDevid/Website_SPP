@@ -23,5 +23,6 @@ urlpatterns = [
     path('home/', HomeView.as_view(), name='home'),
     path('spp/', include('spp.urls')),
     path('petugas/', include('petugas.urls')),
+    path('kelas/', include('kelas.urls')),
     path('user/', include('user.urls')),
 ]

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Kelas</title>
+</head>
+<body>
+    <h1>Edit Kelas</h1>
+    <form method="post" action="{% url 'kelas:edit_kelas' kelas.id_kelas %}">
+        {% csrf_token %}
+        {{ form.as_p }} <!-- Menampilkan form yang telah diinisialisasi pada views.py -->
+        <input type="submit" value="Simpan">
+    </form>
+    <a href="{% url 'kelas:daftar_kelas' %}">Batal</a> <!-- Link untuk batal dan kembali ke daftar kelas -->
+</body>
+</html>

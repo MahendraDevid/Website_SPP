@@ -26,9 +26,9 @@
                 <td>{{ petugas.username }}</td>
                 <td>{{ petugas.nama_petugas }}</td>
                 <td>{{ petugas.level }}</td>
-                <td><a href="{% url 'detail_petugas' petugas.id_petugas %}">Detail</a></td>
-                <td><a href="{% url 'edit_petugas' petugas.id_petugas %}">Edit</a></td>
-                <td><a href="{% url 'hapus_petugas' petugas.id_petugas %}">Hapus</a></td>
+                <td><a href="{% url 'petugas:detail_petugas' petugas.id_petugas %}">Detail</a></td>
+                <td><a href="{% url 'petugas:edit_petugas' petugas.id_petugas %}">Edit</a></td>
+                <td><a href="{% url 'petugas:hapus_petugas' petugas.id_petugas %}">Hapus</a></td>
             </tr>
             {% endfor %}
         </tbody>
