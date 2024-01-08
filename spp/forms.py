@@ -4,4 +4,4 @@ from .models import SPP
 class SPPForm(forms.ModelForm):
     class Meta:
         model = SPP
-        fields = ['id_spp','tahun', 'nominal']
+        fields = ['tahun', 'nominal']

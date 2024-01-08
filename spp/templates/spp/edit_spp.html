@@ -16,6 +16,6 @@
         <input type="text" id="nominal" name="nominal" value="{{ spp.nominal }}"><br><br>
         <input type="submit" value="Simpan">
     </form>
-    <a href="{% url 'detail_spp' spp.pk %}">Batal</a> <!-- Link untuk batal dan kembali ke detail SPP -->
+    <a href="{% url 'spp:detail_spp' spp.pk %}">Batal</a> <!-- Link untuk batal dan kembali ke detail SPP -->
 </body>
 </html>

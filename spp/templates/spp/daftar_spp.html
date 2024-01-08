@@ -24,9 +24,9 @@
                 <td>{{ spp.id_spp }}</td>
                 <td>{{ spp.tahun }}</td>
                 <td>{{ spp.nominal }}</td>
-                <td><a href="{% url 'detail_spp' spp.pk %}">Detail SPP</a></td>
-                <td><a href="{% url 'edit_spp' spp.pk %}">Edit</a></td>
-                <td><a href="{% url 'hapus_spp' spp.pk %}">Hapus</a></td>                
+                <td><a href="{% url 'spp:detail_spp' spp.pk %}">Detail SPP</a></td>
+                <td><a href="{% url 'spp:edit_spp' spp.pk %}">Edit</a></td>
+                <td><a href="{% url 'spp:hapus_spp' spp.pk %}">Hapus</a></td>                
             </tr>
             {% endfor %}
         </tbody>

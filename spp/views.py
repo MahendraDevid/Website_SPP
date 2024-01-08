@@ -11,12 +11,20 @@ def tambah_spp(request):
     if request.method == 'POST':
         form = SPPForm(request.POST)
         if form.is_valid():
-            form.save()
+            # Mendapatkan nilai id_spp dari form atau request
+            id_spp = request.POST.get('id_spp')
+            tahun = form.cleaned_data['tahun']
+            nominal = form.cleaned_data['nominal']
+            
+            # Membuat objek SPP dengan id_spp yang diberikan
+            spp = SPP(id_spp=id_spp, tahun=tahun, nominal=nominal)
+            spp.save()
             return HttpResponseRedirect('/spp/')
     else:
         form = SPPForm()
     
     return render(request, 'spp/tambah_spp.html', {'form': form})
+
 
 def detail_spp(request, spp_id):
     spp = get_object_or_404(SPP, pk=spp_id)
